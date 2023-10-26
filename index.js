@@ -93,6 +93,8 @@ function writeToFile(fileName, data) {
   const titleSect = `# ${title}`;
 
   const descripSect = `## Description\n\n${description}`;
+
+  const tableOfContents = `## Table of Contents\n\n- [Installation](#installation)\n\n- [Usage](#usage)\n\n- [Contributing](#contributing)\n\n- [Tests](#tests)\n\n- [License](#license)\n\n- [Questions](#questions)`;
   
   const installSect = `## Installation\n\n${installation}`;
   
@@ -104,9 +106,9 @@ function writeToFile(fileName, data) {
 
   const licenseSect = `## License\n\nThis application is covered under the ${license}.\n\nPlease refer to the LICENSE file in repo.`
 
-  const questionsSect = `## Questions\n\nMy GitHub profile: https://github.com/${username}\n\nIf you have any further questions, contact me through email.\n\n${email}`
+  const questionsSect = `## Questions\n\nMy GitHub profile: https://github.com/${username}\n\nIf you have any further questions, please contact me through email.\n\n${email}`
 
-  const readme = `${badgeSect}\n\n${titleSect}\n\n${descripSect}\n\n${installSect}\n\n${usageSect}\n\n${contribSect}\n\n${testSect}\n\n${licenseSect}\n\n${questionsSect}`
+  const readme = `${titleSect}\n${badgeSect}\n\n${descripSect}\n\n${tableOfContents}\n\n${installSect}\n\n${usageSect}\n\n${contribSect}\n\n${testSect}\n\n${licenseSect}\n\n${questionsSect}`
 
   fs.appendFile(fileName, readme, (err) => {
     err ? console.error(err) : console.log('Your README file has been generated under the name "Generated_README.md"!')
