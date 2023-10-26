@@ -45,12 +45,8 @@ const questions = [
       'MIT License',
       'BSD 2-Clause "Simplified" License',
       'BSD 3-Clause "New" or "Revised" License',
-      'Boost Software License 1.0',
-      'Creative Commons Zero v1.0 Universal',
-      'Eclipse Public License 2.0',
       'GNU Affero General Public License v3.0',
       'GNU General Public License v2.0',
-      'GNU Lesser General Public LIcense v2.1',
       'Mozilla Public License 2.0',
       'The Unlicense',
   ]
@@ -70,6 +66,27 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   const { title, description, installation, usage, contribution, test, license, username, email } = data;
+
+  let badge = ''
+  if (license === 'Apache License 2.0') {
+    badge = '![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)';
+  } else if (license === 'GNU General Public License v3.0') {
+    badge = '![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)';
+  } else if (license === 'MIT License') {
+    badge = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
+  } else if (license === 'BSD 2-Clause "Simplified" License') {
+    badge = '![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)';
+  } else if (license === 'BSD 3-Clause "New" or "Revised" License') {
+    badge = '![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)';
+  } else if (license === 'GNU Affero General Public License v3.0') {
+    badge = '![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)';
+  } else if (license === 'GNU General Public License v2.0') {
+    badge = '![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)';
+  } else if (license === 'Mozilla Public License 2.0') {
+    badge = '![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)';
+  } else {
+    badge = '![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)';
+  }
 
   const badgeSect = badge;
 
