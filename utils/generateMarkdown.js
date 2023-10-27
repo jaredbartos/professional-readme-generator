@@ -89,11 +89,12 @@ function generateMarkdown(data) {
   return `# ${data.title}
 ${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
 
-${renderTableOfContents(data.license)}
 
 ## Description
 
 ${data.description}
+
+${renderTableOfContents(data.license)}
 
 ## Installation
 
