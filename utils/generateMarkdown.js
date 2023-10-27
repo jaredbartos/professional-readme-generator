@@ -64,17 +64,32 @@ Please refer to the LICENSE file in repo for more information.`
   return licenseSection;
 };
 
+function renderTableOfContents(license) {
+  let tableOfContents = `## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)`
+
+  if (license !== 'None') {
+    tableOfContents = `## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)`
+  }
+  return tableOfContents
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 ${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+${renderTableOfContents(data.license)}
 
 ## Description
 
