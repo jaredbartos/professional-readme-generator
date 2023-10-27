@@ -52,7 +52,7 @@ jaredbartos@gmail.com
 
 ## Link to Demonstration Video
 
-https://drive.google.com/file/d/1LYMrOIuNglEIm4IJYmQIwO356WqL-qf3/view
+https://drive.google.com/file/d/1nJTWiLK0vIyHxNMbMHBXJXivtkpdYT8w/view?usp=sharing
 
 ## Screenshots
 
