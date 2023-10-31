@@ -26,7 +26,11 @@ To install the application, download the zip file from the GitHub repo, or clone
 
 To use the Professional README Generator, open your terminal and navigate to the directory where the downloaded folder resides.
 
-Enter the following command:
+Enter the following command to install required node modules:
+
+<code>npm i</code>
+
+Then enter:
 
 <code>node index.js</code> 
 
